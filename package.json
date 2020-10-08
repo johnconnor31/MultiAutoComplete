@@ -1,6 +1,6 @@
 {
   "name": "autoautocomplete",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "autoautocomplete",
   "main": "./runnables/index.js",
   "scripts": {
@@ -37,7 +37,7 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0"
   },
-  "publishConfig": { 
-    "registry": "https://npm.pkg.github.com/" 
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
