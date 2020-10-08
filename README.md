@@ -10,4 +10,4 @@ I have extended its funtionality by customizing it a little bit so that we can
 
 A sample screenshot looks like below:
 
-![alt text](https://github.com/johnconnor31/AutoAutoComplete/master/sampleImage.jpg?raw=true)
+![alt text](https://github.com/johnconnor31/AutoAutoComplete/blob/main/sampleImage.jpg?raw=true)
