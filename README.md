@@ -22,7 +22,7 @@ In each of the above filters, you can pick the value of filter by selecting  fro
 **1. Options**
 The main options data to pick filters from.
 Example format will look like below:
-
+```
 [
 { 
 "name":"Assignee", 
@@ -55,7 +55,7 @@ Example format will look like below:
   "type": "Date"
 }
 ];
-
+```
 **2. Sub Options**
 Currently selected list of sub options. Defaults to []
 
@@ -65,7 +65,10 @@ Method to be called to set the list of subOptions.
 
 You can create a state Variable to handle the sub options selection.
 
-**Example:** const [subOptions, setSubOptions] = React.useState([]);
+**Example:** 
+```
+const [subOptions, setSubOptions] = React.useState([]);
+```
 
 PS: Currently there is only support for two types of filters
 1. TextField
