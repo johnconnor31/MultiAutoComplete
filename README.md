@@ -57,6 +57,7 @@ Example format will look like below:
 ];
 ```
 **2. Sub Options**
+
 Currently selected list of sub options. Defaults to []
 
 **3. OnChangeSubOptions**
