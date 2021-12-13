@@ -18,21 +18,18 @@ module.exports = {
         }
         ]
     },
-    externals: [
-        // nodeExternals(),
-        {
-          react: {
-            root: 'React',
-            commonjs2: 'react',
-            commonjs: 'react',
-            amd: 'react'
-          },
-          'react-dom': {
-            root: 'ReactDOM',
-            commonjs2: 'react-dom',
-            commonjs: 'react-dom',
-            amd: 'react-dom'
-          }
+    externals: {
+          "react": {
+            "commonjs": "react",
+            "commonjs2": "react",
+            "amd": "react",
+            "root": "React"
+        },
+        "react-dom": {
+            "commonjs": "react-dom",
+            "commonjs2": "react-dom",
+            "amd": "react-dom",
+            "root": "ReactDOM"
         }
-    ]
+    }
 }
