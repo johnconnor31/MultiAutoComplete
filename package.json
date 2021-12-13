@@ -1,6 +1,6 @@
 {
   "name": "multiautocomplete",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "autoautocomplete",
   "main": "./runnables/index.js",
   "scripts": {
@@ -38,5 +38,11 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0"
-  }
+  },
+  "keywords": [
+      "autocomplete",
+      "multicomplete",
+      "jira",
+      "filters"
+  ]
 }
