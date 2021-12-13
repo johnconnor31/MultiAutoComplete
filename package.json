@@ -1,5 +1,5 @@
 {
-  "name": "MultiAutocomplete",
+  "name": "multiautocomplete",
   "version": "1.0.2",
   "description": "autoautocomplete",
   "main": "./runnables/index.js",
