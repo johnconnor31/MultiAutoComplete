@@ -1,4 +1,4 @@
-# AutoAutoComplete
+# MultiAutoComplete
 
 @material-ui/labs/Autocomplete already offers good functionality when you want an autocomplete select component with multiselect option.
 
