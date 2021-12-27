@@ -31,5 +31,10 @@ module.exports = {
             "amd": "react-dom",
             "root": "ReactDOM"
         }
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
     }
 }
