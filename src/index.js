@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function SearchWidget(props) {
+function SearchWidget(props) {
     const { subOptions = [], changeSubOptions = () => { }, options = [], customStyles = {} } = props;
     const styles = useStyles();
     const setSubOptions = values => {
@@ -144,3 +144,5 @@ function ChipWithTextBox(props) {
         </>
     );
 }
+
+export default SearchWidget;

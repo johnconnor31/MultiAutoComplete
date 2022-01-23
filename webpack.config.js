@@ -1,9 +1,9 @@
-
 const path = require('path');
 const htmlPlugin = require('html-webpack-plugin');
 
-module.exports = env => {
-    if (env === 'production') {
+module.exports = (web, env) => {
+    // console.log('env is', env);
+    if (env.mode === 'production') {
         return {
             entry: {
                 index: './src/index.js'
@@ -16,9 +16,14 @@ module.exports = env => {
             module: {
                 rules: [
                     {
-                        use: 'babel-loader',
                         exclude: '/node-modules/',
-                        test: /\.(js|jsx)$/
+                        test: /\.(js|jsx)$/,
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: ['@babel/preset-env', '@babel/preset-react']
+                            }
+                        }
                     }
                 ]
             },
@@ -36,11 +41,6 @@ module.exports = env => {
                     "root": "ReactDOM"
                 }
             },
-            optimization: {
-                splitChunks: {
-                    chunks: 'all'
-                }
-            }
         }
     } else {
         return {
