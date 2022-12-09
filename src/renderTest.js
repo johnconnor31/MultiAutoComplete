@@ -5,21 +5,21 @@ import App from './index';
 const options = [
     {
         "name": "Assignee",
-        "opts": [
+        "values": [
             "Elon Musk",
             "Jeff Bezos"
         ]
     },
     {
         "name": "reporter",
-        "opts": [
+        "values": [
             "Elon Musk",
             "Jeff Bezos"
         ]
     },
     {
         "name": "status",
-        "opts": [
+        "values": [
             "Open",
             "In Progress",
             "In Code Review",
@@ -41,7 +41,7 @@ const options = [
 function TestComponent() {
     const [subOptions, setSubOptions] = useState([]);
     return (
-        <App options={options} subOptions={subOptions} changeSubOptions={setSubOptions} />
+        <App allOptions={options} subOptions={subOptions} changeSubOptions={setSubOptions} />
     );
 }
 
