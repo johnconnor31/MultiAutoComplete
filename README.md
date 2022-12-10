@@ -19,27 +19,27 @@ In each of the above filters, you can pick the value of filter by selecting  fro
 
 # API Options
 
-**1. Options**
+**1. allOptions**
 The main options data to pick filters from.
 Example format will look like below:
 ```
 [
 { 
 "name":"Assignee", 
-  "opts": [
+  "values": [
         "Elon Musk",
         "Jeff Bezos"
         ]
  },
 { 
 "name": "reporter", 
-  "opts": [
+  "values": [
     "Elon Musk",
     "Jeff Bezos"
     ]
 },
 { "name": "status",
-    "opts": [
+    "values": [
     "Open",
     "In Progress",
     "In Code Review",
@@ -56,11 +56,11 @@ Example format will look like below:
 }
 ];
 ```
-**2. Sub Options**
+**2. subOptions**
 
 Currently selected list of sub options. Defaults to []
 
-**3. OnChangeSubOptions**
+**3. onChangeSubOptions**
 
 Method to be called to set the list of subOptions.
 
