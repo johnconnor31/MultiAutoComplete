@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactDOM  from 'react-dom';
+import ReactDOM  from 'react-dom/client';
 import App from './index';
 
 const options = [
@@ -45,4 +45,5 @@ function TestComponent() {
     );
 }
 
-ReactDOM.render(<TestComponent />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<TestComponent />);

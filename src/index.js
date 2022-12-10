@@ -96,6 +96,7 @@ function ChipWithTextBox(props) {
     }
 
     const InputField = !type ? <Autocomplete
+        key={selectedOption.name}
         multiple
         filterSelectedOptions
         options={values}
@@ -118,6 +119,7 @@ function ChipWithTextBox(props) {
     />
         : <LocalizationProvider dateAdapter={AdapterDateFns}>
             <DatePicker
+                key={selectedOption.name}
                 variant='inline'
                 autoOk
                 format="MM/dd/yyyy"
@@ -130,7 +132,8 @@ function ChipWithTextBox(props) {
                 KeyboardButtonProps={{
                     color: 'primary'
                 }}
-                renderInput={props => <TextField {...props} 
+                renderInput={props => <TextField {...props}
+                ref={textRef}
                 classes={{ root: customStyles.datePicker || styles.datePicker }}
                 variant='standard'
                 InputProps={{
@@ -145,11 +148,9 @@ function ChipWithTextBox(props) {
     const chipComponentWithTextBox = Object.assign([], [children[0][0], children[0][1], ':  ', InputField, props.children[0][2]]);
 
     return (
-        <>
-            <div className={className} key={selectedOption.name} onClick={onTextClick} onKeyDown={onTextClick}>
+            <div className={className} onClick={onTextClick} onKeyDown={onTextClick}>
                 {chipComponentWithTextBox}
             </div>
-        </>
     );
 }
 
