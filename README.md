@@ -1,6 +1,6 @@
 # MultiAutoComplete
 
-@mui/core/Autocomplete already offers good functionality when you want an autocomplete select component with multiselect option.
+@mui/material/Autocomplete already offers good functionality when you want an autocomplete select component with multiselect option.
 
 I have extended its funtionality to support an Autocomplete of Autocompletes.
 
