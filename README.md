@@ -1,6 +1,6 @@
 # MultiAutoComplete
 
-@material-ui/labs/Autocomplete already offers good functionality when you want an autocomplete select component with multiselect option.
+@mui/core/Autocomplete already offers good functionality when you want an autocomplete select component with multiselect option.
 
 I have extended its funtionality to support an Autocomplete of Autocompletes.
 
@@ -20,6 +20,7 @@ In each of the above filters, you can pick the value of filter by selecting  fro
 # API Options
 
 **1. allOptions**
+
 The main options data to pick filters from.
 Example format will look like below:
 ```
