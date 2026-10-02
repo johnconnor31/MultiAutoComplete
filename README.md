@@ -1,77 +1,144 @@
 # MultiAutoComplete
 
-@mui/material/Autocomplete already offers good functionality when you want an autocomplete select component with multiselect option.
+A powerful React component that extends Material-UI's Autocomplete to support **nested multi-level selectors**. Create complex filter hierarchies where you can have selectors inside the main selector.
 
-I have extended its funtionality to support an Autocomplete of Autocompletes.
+## Overview
 
-![alt text](https://github.com/johnconnor31/AutoAutoComplete/blob/main/sampleImage.jpg?raw=true)
+MultiAutoComplete enables building advanced filtering interfaces similar to Jira, where users can:
+- Select multiple filter types (e.g., Assignee, Status, Date)
+- For each filter, choose from a list of sub-options
+- Support both text and date-based filters
 
-This will be helpful in a Jira filter type of situation where:
+## Features
 
-A user may need to select few filters like:
+✨ **Nested Selectors** - Add autocomplete fields within each selected filter
 
-1. Assignee
-2. Created Date
-3. Updated Date
-4. Reported by etc. 
+🎯 **Multi-Select Support** - Select multiple filters simultaneously
 
-In each of the above filters, you can pick the value of filter by selecting  from a list of subOptions.
+📅 **Date Pickers** - Built-in support for date range and single date selections
 
-# API Options
+🎨 **Material-UI Integration** - Built on Material-UI v6 for consistent styling
 
-**1. allOptions**
+⚙️ **Flexible Configuration** - Easy API for defining filter options and sub-options
 
-The main options data to pick filters from.
-Example format will look like below:
+## Use Cases
+
+- **Jira-like Filtering** - Filter by Assignee, Status, Created Date, Updated Date, etc.
+- **Advanced Search** - Multi-criteria search with nested options
+- **Dynamic Filters** - Configure filter hierarchies on the fly
+
+## Installation
+
+```bash
+npm install multiautocomplete
 ```
-[
-{ 
-"name":"Assignee", 
-  "values": [
-        "Elon Musk",
-        "Jeff Bezos"
-        ]
- },
-{ 
-"name": "reporter", 
-  "values": [
-    "Elon Musk",
-    "Jeff Bezos"
-    ]
-},
-{ "name": "status",
-    "values": [
-    "Open",
-    "In Progress",
-    "In Code Review",
-    "Resolved",
-    "Verified",
-    "Closed"
-    ]
-},
-{ "name": "Updated Date", 
-  "type": "Date"
-},
-{ "name": "Created Date",
-  "type": "Date"
-}
+
+## Basic Usage
+
+```jsx
+import MultiAutoComplete from 'multiautocomplete';
+
+const allOptions = [
+  { 
+    name: "Assignee", 
+    values: ["Elon Musk", "Jeff Bezos"]
+  },
+  { 
+    name: "Status", 
+    values: ["Open", "In Progress", "Closed"]
+  },
+  { 
+    name: "Created Date", 
+    type: "Date"
+  }
 ];
+
+function App() {
+  const [subOptions, setSubOptions] = React.useState([]);
+
+  return (
+    <MultiAutoComplete
+      allOptions={allOptions}
+      subOptions={subOptions}
+      onChangeSubOptions={setSubOptions}
+    />
+  );
+}
 ```
-**2. subOptions**
 
-Currently selected list of sub options. Defaults to []
+## API Options
 
-**3. onChangeSubOptions**
+### 1. `allOptions` (Required)
 
-Method to be called to set the list of subOptions.
+The main filter options data. Each option can have a list of sub-values or be a date filter.
 
-You can create a state Variable to handle the sub options selection.
-
-**Example:** 
+**Format:**
+```javascript
+[
+  { 
+    name: "Assignee", 
+    values: [
+      "Elon Musk",
+      "Jeff Bezos"
+    ]
+  },
+  { 
+    name: "Reporter", 
+    values: [
+      "Elon Musk",
+      "Jeff Bezos"
+    ]
+  },
+  { 
+    name: "Status",
+    values: [
+      "Open",
+      "In Progress",
+      "In Code Review",
+      "Resolved",
+      "Verified",
+      "Closed"
+    ]
+  },
+  { 
+    name: "Updated Date", 
+    type: "Date"
+  },
+  { 
+    name: "Created Date",
+    type: "Date"
+  }
+]
 ```
+
+### 2. `subOptions` (Optional)
+
+Array of currently selected filters and their values. Defaults to `[]`.
+
+### 3. `onChangeSubOptions` (Required)
+
+Callback function to update the selected sub-options when the user makes a selection.
+
+**Example:**
+```jsx
 const [subOptions, setSubOptions] = React.useState([]);
+
+<MultiAutoComplete
+  allOptions={allOptions}
+  subOptions={subOptions}
+  onChangeSubOptions={setSubOptions}
+/>
 ```
 
-PS: Currently there is only support for two types of filters
-1. TextField
-2. Date Picker
+## Supported Filter Types
+
+- **TextField** - Standard text input with autocomplete suggestions
+- **Date Picker** - Material-UI date picker for date selection
+
+## Live Demo
+
+Check out the [live demo](https://multi-auto-complete.vercel.app/) to see MultiAutoComplete in action.
+
+## License
+
+ISC

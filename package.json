@@ -1,7 +1,7 @@
 {
   "name": "multiautocomplete",
   "version": "1.0.10",
-  "description": "autoautocomplete",
+  "description": "A multi-level autocomplete component where you can have nested selectors inside the main selector",
   "main": "./runnables/index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -19,32 +19,34 @@
   },
   "homepage": "https://github.com:johnconnor31/AutoAutoComplete",
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.17",
-    "@mui/styles": "^5.10.16",
-    "@mui/x-date-pickers": "^5.0.10",
-    "date-fns": "^2.29.3"
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.0.1",
+    "@mui/system": "^6.0.1",
+    "@mui/x-date-pickers": "^7.20.0",
+    "date-fns": "^3.6.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
-    "babel-loader": "^8.1.0",
-    "html-webpack-plugin": "^4.5.2",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "babel-loader": "^9.1.3",
+    "html-webpack-plugin": "^5.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^4.3.0",
-    "webpack-dev-server": "^4.11.1"
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   },
   "keywords": [
     "autocomplete",
     "multicomplete",
+    "multi-select",
+    "nested-selectors",
     "jira",
     "filters"
   ]
