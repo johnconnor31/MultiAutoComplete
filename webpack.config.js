@@ -2,7 +2,6 @@ const path = require('path');
 const htmlPlugin = require('html-webpack-plugin');
 
 module.exports = (web, env) => {
-    // console.log('env is', env);
     if (env.mode === 'production') {
         return {
             entry: {
@@ -47,6 +46,10 @@ module.exports = (web, env) => {
             mode: 'development',
             entry: {
                 index: './src/renderTest.js'
+            },
+            output: {
+                path: path.resolve('./dist'),
+                filename: '[name].js'
             },
             module: {
                 rules: [
